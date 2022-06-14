@@ -27,19 +27,11 @@ namespace FootballApp.Forms
         public void delete()
         {
             foreach (var item2 in Controls)
-            {
+                if (item2 is Panel pnl)pnl.Controls.Clear();
 
-              if (item2 is Panel pnl)
-              {
-
-                    pnl.Controls.Clear();
-              }
-                
-            }
         }
         public void Row()
-        {
-            int a = 0;            
+        {           
             delete();
             foreach (var item2 in Controls)
             {
