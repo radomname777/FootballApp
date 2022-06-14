@@ -31,19 +31,16 @@ namespace FootballApp.Forms
 
               if (item2 is Panel pnl)
               {
-                foreach (var item in pnl.Controls)
-                {
-                  if (item is UserControls.ControlPlayer pl)
-                  {
-                    pnl.Controls.Remove(pl);
-                  }
-                }
+
+                    pnl.Controls.Clear();
               }
                 
             }
         }
         public void Row()
         {
+            int a = 0;            
+            delete();
             foreach (var item2 in Controls)
             {
                  foreach (var item in Players)
@@ -51,12 +48,14 @@ namespace FootballApp.Forms
                     if (item2 is Panel pnl)
                     {
                         if (item.Position == pnl.Tag)
-                        {       
+                        {
+
                             UserControls.ControlPlayer B = new UserControls.ControlPlayer();
                             B.Dock = DockStyle.Right;
                             B.Player_Number = item.Number.ToString();
                             B.Names = item.Name;
                             pnl.Controls.Add(B);
+
                         }
                     }
                  }

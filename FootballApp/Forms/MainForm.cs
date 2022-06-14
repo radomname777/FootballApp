@@ -46,6 +46,10 @@ namespace FootballApp
         private void btn_Generate_Click(object sender, EventArgs e)
         {
             StadiumForm.CountryName = cBox_CountryNames.Text;
+
+
+      
+            
             StadiumForm.Players = Players;
             StadiumForm.Row();
             StadiumForm.ShowDialog();
